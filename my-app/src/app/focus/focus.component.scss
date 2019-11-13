@@ -1,0 +1,30 @@
+ul{
+    width: 40%;
+    margin-left: 29%;
+    margin-top: 7%;
+}
+li{
+    list-style-type: none;
+    display: flex;
+}
+.listItems{
+    background: #EDEEEE;
+    margin-top:2px;
+    padding:3%;
+}
+.editBtn{
+    width:20px; 
+    height:20px; 
+    padding-right:17px;
+}
+.deleteBtn{
+    width:20px; 
+    height:20px;
+}
+.itemDesc, .editInput{
+    width:80%;
+}
+.editInput{
+    border:none;
+}
+

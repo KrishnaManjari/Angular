@@ -1,0 +1,12 @@
+<div id="map">
+    <i class='fas fa-marker' style='font-size:48px;color:red'></i>
+</div>
+<div class="latlngs">
+    <p>Latitude:   </p><input type="text" name="lat" value="" [(ngModel)]= "latitude">
+    <p>Longitude:   </p><input type="text" name="lng" value="" [(ngModel)]= "longitude"><br>
+    <br><input type="button" name="submit" value="Submit" (click)= "addMarkers($event)"><br>
+    <br><input type="button" name="DrawPolygon" value="Draw Polygon" (click)= "drawPolygon($event)"><br>
+    <br><input type="button" name="DrawPolygon" value="Remove Polygon" (click)= "removePolygon($event)"><br>
+    <br><input type="button" name="DrawPolyline" value="Draw Polyline" (click)= "DrawPolyline($event)"><br>
+    <br><input type="file" name="json" value=".json" (change)= "fileReader($event)"><p>(.json files only)</p>
+</div>

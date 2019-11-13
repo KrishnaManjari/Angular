@@ -1,0 +1,34 @@
+.header {
+    height: 65px;
+    background-color: #5f5f5f;
+}
+.header a{
+    text-decoration: none;
+    color:white;
+}
+.header li{
+    position: relative;
+    top:8px;
+    display: inline;
+    font-size: 21px;
+    font-family: 'Times New Roman', Times, serif;    
+    color: white;
+}
+.header .task{
+    margin-left:30%;
+}
+.header .focus{
+    margin-left:6%;
+}
+.header .history{
+    margin-left:6%;
+}
+.header .settings{
+    margin-left:6%;
+}
+.header .login{
+    margin-left:17%;
+}
+.alertsContainer{
+    background: white;
+}

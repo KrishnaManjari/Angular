@@ -1,0 +1,31 @@
+<!-- <table class="table table-striped">
+    <thead>
+    <tr>
+        <th style="width: 20%">Name</th>
+        <th style="width: 50%">Email</th>
+        <th style="width: 10%">Age</th>
+        <th style="width: 20%">City</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of mf.data">
+        <td>{{item.name}}</td>
+        <td>{{item.email}}</td>
+        <td class="text-right">{{item.age}}</td>
+        <td>{{item.city | uppercase}}</td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+        <td colspan="4"> <mfBootstrapPaginator [rowsOnPageSet]="[5,10,25]"></mfBootstrapPaginator> 
+        </td>
+    </tr>
+    </tfoot>
+</table> -->
+<div class="dataTablefile">
+        <input type="file" name="json" value=".json" (change)= "fileReader($event)">
+</div>
+<div class="dataTable">
+    <ngx-datatable [rows]="rows" [columns]="columns">
+    </ngx-datatable>
+</div>

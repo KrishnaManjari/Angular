@@ -1,0 +1,44 @@
+<p>focus works!</p>
+<div class= "calender">
+    <input type= "date" [(ngModel)] = "dateValue" (change)= "dateSelection()">
+</div>
+<div >
+    <div class = "myDiv">
+        <ul class="myList" #myList>
+            <li *ngFor= "let task of tasksData; let i=index" class="listItems">
+                <!-- <div class= "item" item> -->
+                    <input type = "checkbox" class="check"  id= {{i}} (click)= "tick($event)">
+                    <span class= "itemDesc">{{task}}</span>
+                    <input type = "text" value={{task}} style='display: none' class="editInput" (change)= "editDone($event)" >
+                    <img src = 'assets/download.jpg' class= "editBtn" #editBtn (click)= "edit($event)"/>
+                    <img src = 'assets/dele.jpg' class="deleteBtn" #deleteBtn (click)= "delete($event)"/>
+                <!-- </div> -->
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,15 @@
+{
+    "dataTable":[{
+        "name": "Rahul",
+        "gender": "Male",
+        "company": "Swimlane"
+    },{
+        "name": "Ankit",
+        "gender": "Male",
+        "company": "SFC"
+    },{
+        "name": "Neha",
+        "gender": "Female",
+        "company": "Mc. Donals"
+    }]
+}
