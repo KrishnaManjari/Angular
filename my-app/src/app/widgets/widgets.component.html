@@ -1,0 +1,37 @@
+<!-- <div class="dataEntry">
+    <br><input type="text" name="name" ><br>
+    <br><input type="number" name="age" value="age"><br>
+    <br><input type="submit" name="submit" value="submit" (click)= "addWidget">
+</div>
+<br>
+<div class="line"></div>
+<div class="widgets">
+    <div class="dataTable">
+        <ngx-datatable [rows]="rows" [columns]="columns">
+        </ngx-datatable>
+    </div>
+</div> -->
+<div style="width: 100%; height:100%;">
+    <as-split direction="horizontal">
+        <as-split-area size="25">
+            <br>Name: <input type="text" name="name" [(ngModel)]="name"><br>
+            <br>Age: <input type="number" name="age" [(ngModel)]="age"><br>
+            <br><input type="submit" name="submit" value="submit" id={{i}} (click)="addWidget($event)">
+        </as-split-area>
+        <as-split-area size="75" style="padding-top: 20px;">
+            <div style="display: flex; flex-wrap: wrap;">
+                <div *ngFor="let widget of widgets" style="padding-right: 20px; padding-bottom: 20px;">
+                    <div class="widgets">
+                        <table>
+                            <tr>{{widget.user}}</tr>
+                            <tr>{{widget.userAge}}</tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </as-split-area>
+    </as-split>
+</div>
+<div>
+
+</div>

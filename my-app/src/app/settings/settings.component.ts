@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { point, polyline } from 'leaflet';
+import {ShareTasksService} from '../share-tasks.service'
 declare let L;
 @Component({
   selector: 'app-settings',
@@ -15,7 +16,7 @@ export class SettingsComponent implements OnInit {
   polygon;
   dataUrl;
   polyline;
-  constructor() { }
+  constructor(private widgetServices: ShareTasksService) { }
   
   ngOnInit() {
     this.map = L.map('map').setView([51.505, -0.09], 13);
@@ -32,6 +33,11 @@ export class SettingsComponent implements OnInit {
     this.mapMarkers =L.marker([this.latitude,this.longitude]).addTo(this.map);
     this.polyArray.push([this.latitude,this.longitude]);
     this.map.setView([this.latitude,this.longitude], 18);
+    if(this.widgetServices){
+      this.widgetServices.widgetServices.push([this.latitude, this.longitude]);
+    } else{
+      this.widgetServices.widgetServices.push([this.latitude, this.longitude]);
+    }
   }
   drawPolygon(event){
     this.polygon = L.polygon([this.polyArray]).addTo(this.map);

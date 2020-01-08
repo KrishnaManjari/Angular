@@ -1,0 +1,17 @@
+.dataEntry{
+    width:250px;
+    height: 100%;
+}
+.widgets{
+    width: 176px;
+    height: 100px;
+    background-color: darkgray;
+    display: flex;
+}
+.line{
+    border-left: 6px solid darkgray;
+    height: 89%;
+    position: absolute;
+    left: 20%;
+    top: 72px;
+}
