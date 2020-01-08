@@ -1,5 +1,5 @@
 import {BrowserModule } from '@angular/platform-browser';
-import {NgModule } from '@angular/core';
+import {NgModule, Component } from '@angular/core';
 import {RouterModule, Routes } from '@angular/router';
 import {FormsModule} from '@angular/forms';
 import {AlertsModule} from 'angular-alert-module';
@@ -14,6 +14,9 @@ import {LeafletModule } from '@asymmetrik/ngx-leaflet';
 import {AngularFontAwesomeModule} from 'angular-font-awesome';
 import {DataTablesModule} from 'angular-datatables';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
+import { WidgetsComponent } from './widgets/widgets.component';
+import { AngularSplitModule } from 'angular-split';
+import { AngularDraggableModule } from 'angular6-draggable'
 
 const routes: Routes = [
   { path: '', redirectTo: '/myTask', pathMatch: 'full' },
@@ -21,7 +24,8 @@ const routes: Routes = [
   {path: 'myTask', component: MyTaskComponent},
   {path: 'history', component: HistoryComponent},
   {path: 'settings', component: SettingsComponent},
-  {path: 'login', component: LoginComponent}
+  {path: 'login', component: LoginComponent},
+  {path: 'widgets', component: WidgetsComponent}
 ];
 
 @NgModule({
@@ -31,7 +35,8 @@ const routes: Routes = [
     FocusComponent,
     HistoryComponent,
     SettingsComponent,
-    LoginComponent
+    LoginComponent,
+    WidgetsComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +47,8 @@ const routes: Routes = [
     LeafletModule,
     AngularFontAwesomeModule,
     DataTablesModule,
-    NgxDatatableModule
+    NgxDatatableModule,
+    AngularSplitModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
